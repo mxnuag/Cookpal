@@ -7,6 +7,7 @@ import data from "./recipes.json";
 import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { particlesbackground } from "./components/particlesbackground";
 const App = () => {
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/recipe/:id" element={<RecipeDetails recipes={recipes}/>} />
       </Routes>
+      <particlesbackground/>
       <Footer/>
     </BrowserRouter>
   );
